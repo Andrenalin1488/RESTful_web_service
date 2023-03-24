@@ -1,0 +1,108 @@
+table.steelBlueCols {
+    border: 5px solid #555555;
+    background-color: #555555;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    border-collapse: collapse;
+}
+table.steelBlueCols td, table.steelBlueCols th {
+    border: 3px solid #555555;
+    padding: 4px 10px;
+}
+table.steelBlueCols tbody td {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+table.steelBlueCols td:nth-child(even) {
+    background: #398AA4;
+}
+table.steelBlueCols thead {
+    background: #398AA4;
+    border-bottom: 0px solid #398AA4;
+}
+table.steelBlueCols thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 0px solid #398AA4;
+}
+table.steelBlueCols thead th:first-child {
+    border-left: none;
+}
+
+table.steelBlueCols tfoot td {
+    font-size: 14px;
+}
+table.steelBlueCols tfoot .links {
+    text-align: right;
+}
+table.steelBlueCols tfoot .links a{
+    display: inline-block;
+    background: #FFFFFF;
+    color: #398AA4;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.gbut {
+    margin: 2% auto;
+    color: #ffffff;
+    background-color: #629dbd;
+    font-size: 70%;
+    border: 1px solid #629dbd;
+    padding: 1% 10%;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.but {
+    margin: 2% auto;
+    color: #ffffff;
+    background-color: #629dbd;
+    font-size: 70%;
+    border: 1px solid #629dbd;
+    padding: 1% 10%;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+
+.gui {
+    display: flex;
+    border-radius: 20px;
+    margin: 1% 37%;
+    width: 26%;
+    color: #ffffff;
+    background-color: #555555;
+    font-size: 19px;
+    border: 1px solid #629dbd;
+    padding: 5px 40px;
+    letter-spacing: 1px;
+    cursor: pointer
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+    width: 100%;
+    height: 700px
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+}

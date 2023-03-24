@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+    <link rel="stylesheet" th:href="@{/resources/show.css}">
+</head>
+<body>
+<table class="steelBlueCols">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${person.getId()}">VALUE</td>
+        <td th:text="${person.getName()}">VALUE</td>
+        <td th:text="${person.getSurname()}">VALUE</td>
+        <td th:text="${person.getAge()}">VALUE</td>
+        <td th:text="${person.getEmail()}">VALUE</td>
+    </tr>
+    </tbody>
+    </tr>
+</table>
+
+<form class="gui" th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+    <a class="gbut" th:href="@{/people/{id}/edit(id=${person.getId()})}">Update</a>
+    <input class="but" type="submit" value="Delete"/>
+</form>
+
+<div class="container">
+    <img id="img" src="https://img.itinari.com/page/content/original/edaee0fd-0d51-427e-8cc8-781465c594fa-istock-619065990.jpg?ch=DPR&dpr=2.625&w=994&s=f06e91fd0c854e7c5ca58e18994de904"
+         style="width: 90%" alt="Oxford park">
+</div>
+<footer>
+    <p>UNIVERSITY</p>
+</footer>
+
+</body>
+
+
+
+</html>

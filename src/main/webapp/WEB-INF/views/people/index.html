@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <link rel="stylesheet" th:href="@{/resources/index.css}">
+</head>
+<body>
+
+<ul class="border">
+    <div th:each="person : ${persons}">
+        <li>
+            <a th:text="${'Student - ' + person.getName() + ', ' + person.getSurname() + ', ' + person.getAge() + ', ' + person.getEmail()}"
+               th:href="@{/people/{id}(id=${person.getId()})}">user</a>
+        </li>
+    </div>
+</ul>
+
+<br/>
+<hr/>
+
+<a href="/people/welcome" id="button1" class="btn btn-primary btn-lg btn-block login-button" style="background-color: #009edf;">Create new person</a>
+
+
+<footer>
+    <p>UNIVERSITY</p>
+</footer>
+
+</body>
+</html>

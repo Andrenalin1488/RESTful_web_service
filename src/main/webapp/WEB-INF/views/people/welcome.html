@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" th:href="@{/resources/welcome_css.css}">
+
+</head>
+<body>
+<div class="container">
+    <div class="row main-form">
+        <form class="" method="post" th:method="POST" th:action="@{/people}" th:object="${person}" action="#">
+
+            <div class="form-group">
+                <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control"  th:field="*{name}" id="name" placeholder="Enter your Name"/>
+                        <div style="color:floralwhite" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="surname" class="cols-sm-2 control-label">Your Surname</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control"  th:field="*{surname}" id="surname" placeholder="Enter your Surname"/>
+                        <div style="color:floralwhite" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname Error</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="age" class="cols-sm-2 control-label">Your Age</label>
+                <div class="cols-sm-10">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control"  th:field="*{age}" id="age" placeholder="Enter your Age"/>
+                        <div style="color:floralwhite" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                <div class="cols-sm-10">
+
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <input type="text" class="form-control"  th:field="*{email}" id="email" placeholder="Enter your Email"/>
+                        <div style="color:floralwhite" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</div>
+                        <h1 class="error" th:text="${email}">Данные отсутствуют</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <input type="submit" href="#" id="button" value="Create"/>
+                <a href="/people" id="button1">Show all students</a>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+<footer>
+    <p>UNIVERSITY</p>
+</footer>
+
+</body>
+</html>
